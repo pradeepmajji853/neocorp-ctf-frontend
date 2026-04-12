@@ -1,0 +1,23 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://REPLACE_WITH_RENDER_URL/api/$1"
+    },
+    {
+      "source": "/hidden-admin-v2/(.*)",
+      "destination": "https://REPLACE_WITH_RENDER_URL/hidden-admin-v2/$1"
+    },
+    {
+      "source": "/robots.txt",
+      "destination": "https://REPLACE_WITH_RENDER_URL/robots.txt"
+    },
+    {
+      "source": "/uploads/(.*)",
+      "destination": "https://REPLACE_WITH_RENDER_URL/uploads/$1"
+    }
+  ]
+}
