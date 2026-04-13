@@ -1,6 +1,5 @@
 /*
  * Challenge 3: Stored XSS (Bulletin Board)
- * Flag: flag{cybermindspace_xss_stored_9b3c7d5f}
  * This application is intentionally vulnerable for educational purposes only.
  */
 import React, { useState, useEffect } from 'react'

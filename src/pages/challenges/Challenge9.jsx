@@ -1,6 +1,5 @@
 /*
  * Challenge 9: Hidden Admin Panel Discovery
- * Flag: flag{cybermindspace_hidden_panel_3e7a1f5c}
  * Students must discover /hidden-admin-v2 themselves via robots.txt or source code.
  * No fetch buttons or navigation hints provided on this page.
  */

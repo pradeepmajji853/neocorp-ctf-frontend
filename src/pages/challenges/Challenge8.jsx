@@ -1,6 +1,5 @@
 /*
  * Challenge 8: JWT Manipulation
- * Flag: flag{cybermindspace_jwt_6a2f9c3d}
  * Students must decode the JWT themselves and forge it. Secret and decoded payload NOT shown.
  */
 import React, { useState } from 'react'

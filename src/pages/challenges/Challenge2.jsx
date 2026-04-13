@@ -1,7 +1,6 @@
 /*
  * Challenge 2: Reflected XSS (Search Functionality)
- * Flag: flag{cybermindspace_xss_reflected_4d1e8f2a} — hidden in X-Secret-Flag HTTP response header
- * Students must find it via DevTools → Network tab. NOT shown on screen.
+ * Students must find the flag via DevTools → Network tab. NOT shown on screen.
  */
 import React, { useState } from 'react'
 import axios from 'axios'

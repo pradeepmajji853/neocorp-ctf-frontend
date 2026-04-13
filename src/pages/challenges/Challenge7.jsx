@@ -1,6 +1,5 @@
 /*
  * Challenge 7: File Upload Vulnerability (MIME Type Bypass)
- * Flag: flag{cybermindspace_upload_1d4e8b6f}
  * The MIME override is present but not labeled. Students must figure out what it does.
  */
 import React, { useState } from 'react'

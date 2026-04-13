@@ -1,6 +1,5 @@
 /*
  * Challenge 5: IDOR — Insecure Direct Object Reference
- * Flag: flag{cybermindspace_idor_8c2d9e3a}
  * Students must enumerate profile IDs to find privileged accounts.
  */
 import React, { useState, useEffect } from 'react'

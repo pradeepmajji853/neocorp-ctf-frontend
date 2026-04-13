@@ -1,6 +1,5 @@
 /*
  * Challenge 1: SQL Injection (Login Bypass)
- * Flag: flag{cybermindspace_sqli_7f3a2b9c}
  * This application is intentionally vulnerable for educational purposes only.
  */
 import React, { useState } from 'react'

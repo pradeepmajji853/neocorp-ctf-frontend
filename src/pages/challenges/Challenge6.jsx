@@ -1,6 +1,5 @@
 /*
  * Challenge 6: Directory Traversal (File Reader)
- * Flag: flag{cybermindspace_traversal_5f7b1a3e} — in ../../secret/flag6.txt
  * Students must discover path traversal themselves. No presets provided.
  */
 import React, { useState } from 'react'

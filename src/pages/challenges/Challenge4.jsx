@@ -1,6 +1,5 @@
 /*
  * Challenge 4: Broken Authentication (Weak Base64 Session Cookie)
- * Flag: flag{cybermindspace_broken_auth_2e6a4f1b}
  * Students must decode the base64 token themselves, forge it, and submit.
  */
 import React, { useState } from 'react'

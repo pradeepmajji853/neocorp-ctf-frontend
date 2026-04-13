@@ -1,6 +1,5 @@
 /*
  * Challenge 10: Cookie / Role Manipulation (Final)
- * Flag: flag{cybermindspace_MASTER_3a9f1d7e2b}
  * Students must ACTUALLY edit the neocorp_role cookie via DevTools. No simulator.
  * The _role_override query param has been removed from the backend.
  */
