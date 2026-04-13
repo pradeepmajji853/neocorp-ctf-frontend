@@ -1,3 +1,4 @@
+// Deployment Trigger: 2026-04-13 - Hardened Version
 import React from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Challenge1 from './pages/challenges/Challenge1'
