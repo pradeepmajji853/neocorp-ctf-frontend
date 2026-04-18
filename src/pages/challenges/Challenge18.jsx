@@ -6,10 +6,10 @@ import axios from 'axios'
 import ChallengeShell from '../../components/ChallengeShell'
 
 const BACKSTORY = [
-  "An engineer on the platform team wrote a twelve-line `deepMerge` helper so the settings API could accept partial updates. They copy-pasted it from a Stack Overflow answer from 2016. No filter for `__proto__`. No `Object.create(null)`. It merged everything.",
-  "Six weeks later, a security consultant pasted `{\"__proto__\": {\"isAdmin\": true}}` into the preferences endpoint and watched every subsequent request be treated as admin. The `isAdmin` check elsewhere in the app did `if (user.isAdmin)` on a plain object — and plain objects inherit from Object.prototype.",
-  "The exploit didn't need privileges. It didn't touch the database. It mutated the runtime itself. The fix was three characters: `hasOwn`.",
-  "Your mission: pollute the prototype so the admin panel thinks every empty object is a system admin.",
+  "An engineer on the platform team wrote a twelve-line `deepMerge` helper so the settings API could accept partial updates. They copy-pasted it from a Stack Overflow answer from 2016. No filter on inherited property keys. It merged everything, recursively.",
+  "Six weeks later, a security consultant crafted a special JSON object and submitted it to the preferences endpoint. Within seconds, every subsequent request to the admin panel was approved — without any credentials.",
+  "The exploit didn't need privileges. It didn't touch the database. It mutated the JavaScript runtime itself. The fix was three characters.",
+  "Your mission: figure out what the consultant submitted. One PUT request was all it took. Then check if the /admin-panel agrees.",
 ]
 
 const SAMPLE = `{

@@ -1,6 +1,6 @@
 /*
  
- * Students must discover /hidden-admin-v2 themselves via robots.txt or source code.
+ * Students must discover /system-diagnostic-v2 themselves via robots.txt or source code.
  * 
  */
 import React, { useState } from 'react'
@@ -24,7 +24,7 @@ export default function Challenge9() {
   const handleLogin = async (e) => {
     e.preventDefault(); setLoading(true)
     try {
-      const res = await axios.post('/hidden-admin-v2/login', { username, password }, { withCredentials: true })
+      const res = await axios.post('/system-diagnostic-v2/login', { username, password }, { withCredentials: true })
       setLoginResult(res.data)
     } catch (err) { setLoginResult(err.response?.data || { error: 'Login failed' }) }
     setLoading(false)
@@ -33,7 +33,7 @@ export default function Challenge9() {
   const handleDashboard = async () => {
     setLoading(true)
     try {
-      const res = await axios.get('/hidden-admin-v2/dashboard', { withCredentials: true })
+      const res = await axios.get('/system-diagnostic-v2/dashboard', { withCredentials: true })
       setDashResult(res.data)
     } catch (err) { setDashResult(err.response?.data || { error: 'Unauthorized' }) }
     setLoading(false)
