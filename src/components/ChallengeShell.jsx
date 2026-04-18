@@ -62,7 +62,7 @@ export default function ChallengeShell({ id, title, vuln, difficulty, backstory,
       </div>
 
       {/* ── Page content ────────────────────────────────────── */}
-      <div style={{ maxWidth: 900, margin: '0 auto', padding: '36px 24px' }}>
+      <div style={{ maxWidth: 900, margin: '0 auto', padding: '36px 24px 80px' }}>
 
         {/* Backstory panel */}
         {backstory && (

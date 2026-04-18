@@ -40,7 +40,7 @@ export default function Challenge11({ apiBase }) {
         <form onSubmit={runPing} style={{ padding: '22px 22px 14px' }}>
           <label style={lbl}>HOST / IP</label>
           <input style={inp} type="text" value={host} onChange={e => setHost(e.target.value)} placeholder="e.g. google.com" autoComplete="off" />
-          <button type="submit" style={btn} disabled={loading}>{loading ? 'Pinging…' : '{'> '} Run Ping'}</button>
+          <button type="submit" style={btn} disabled={loading}>{loading ? 'Pinging…' : '>  Run Ping'}</button>
         </form>
       </div>
 

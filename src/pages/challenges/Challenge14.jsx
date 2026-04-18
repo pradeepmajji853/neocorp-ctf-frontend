@@ -40,7 +40,7 @@ export default function Challenge14({ apiBase }) {
         <form onSubmit={preview} style={{ padding: '22px' }}>
           <label style={lbl}>URL TO FETCH</label>
           <input style={inp} type="text" value={url} onChange={e => setUrl(e.target.value)} placeholder="https://example.com" autoComplete="off" />
-          <button type="submit" style={btn} disabled={loading}>{loading ? 'Fetching…' : '{'> '} Preview'}</button>
+          <button type="submit" style={btn} disabled={loading}>{loading ? 'Fetching…' : '>  Preview'}</button>
 
           
         </form>

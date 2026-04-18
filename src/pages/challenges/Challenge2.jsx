@@ -37,7 +37,7 @@ export default function Challenge2() {
         <form onSubmit={handleSearch} style={{ display: 'flex', gap: 10, marginBottom: 20 }}>
           <input style={{ ...inp, flex: 1 }} type="text" value={query}
             onChange={e => setQuery(e.target.value)} placeholder="Search documents..." />
-          <button type="submit" style={btnOutline} disabled={loading}>{loading ? '...' : '{'> '} Search'}</button>
+          <button type="submit" style={btnOutline} disabled={loading}>{loading ? '...' : '>  Search'}</button>
         </form>
 
         {results !== null && (

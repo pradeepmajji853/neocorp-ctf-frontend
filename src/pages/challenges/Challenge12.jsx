@@ -40,7 +40,7 @@ export default function Challenge12({ apiBase }) {
         <form onSubmit={submit} style={{ padding: '22px' }}>
           <label style={lbl}>REDIRECT TARGET (?next=)</label>
           <input style={inp} type="text" value={url} onChange={e => setUrl(e.target.value)} placeholder="e.g. /dashboard or https://neocorp.io/home" autoComplete="off" />
-          <button type="submit" style={btn} disabled={loading}>{loading ? 'Validating…' : '{'> '} Follow Redirect'}</button>
+          <button type="submit" style={btn} disabled={loading}>{loading ? 'Validating…' : '>  Follow Redirect'}</button>
         </form>
       </div>
 

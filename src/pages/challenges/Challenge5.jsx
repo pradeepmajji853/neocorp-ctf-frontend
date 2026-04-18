@@ -59,7 +59,7 @@ export default function Challenge5() {
           <form onSubmit={e => { e.preventDefault(); handleLookup() }} style={{ display: 'flex', gap: 10, marginBottom: 16 }}>
             <input style={{ ...inp, flex: 1 }} type="number" value={userId}
               onChange={e => setUserId(e.target.value)} placeholder="Enter a user ID..." min={1} />
-            <button type="submit" style={btnOutline} disabled={loading}>{'> '} Fetch Profile</button>
+            <button type="submit" style={btnOutline} disabled={loading}>>  Fetch Profile</button>
           </form>
 
           {userResult && (

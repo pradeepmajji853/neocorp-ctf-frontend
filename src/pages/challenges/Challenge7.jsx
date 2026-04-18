@@ -69,7 +69,7 @@ export default function Challenge7() {
           </div>
 
           <button type="submit" style={{ ...btnPrimary, width: '100%' }} disabled={loading || !file}>
-            {loading ? 'Uploading...' : '{'> '} Submit Document'}
+            {loading ? 'Uploading...' : '>  Submit Document'}
           </button>
         </form>
 

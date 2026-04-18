@@ -61,7 +61,7 @@ export default function Challenge18({ apiBase }) {
             style={textarea}
             spellCheck={false}
           />
-          <button type="submit" style={btn} disabled={loading}>{loading ? 'Merging…' : '{'> '} PUT /preferences'}</button>
+          <button type="submit" style={btn} disabled={loading}>{loading ? 'Merging…' : '>  PUT /preferences'}</button>
 
           <div style={{ display: 'flex', gap: 8, marginTop: 10 }}>
             <button type="button" onClick={() => call('get', '/admin-panel')} disabled={loading} style={btnSecondary}>

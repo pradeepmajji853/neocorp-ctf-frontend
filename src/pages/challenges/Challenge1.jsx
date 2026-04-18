@@ -56,7 +56,7 @@ export default function Challenge1() {
                 onChange={e => setPassword(e.target.value)} placeholder="Enter password" autoComplete="off" />
 
               <button type="submit" style={btnPrimary} disabled={loading}>
-                {loading ? 'Authenticating...' : '{'> '} Sign In'}
+                {loading ? 'Authenticating...' : '>  Sign In'}
               </button>
             </form>
             <div style={{ marginTop: 14, color: '#1e293b', fontSize: '0.68rem', textAlign: 'center' }}>

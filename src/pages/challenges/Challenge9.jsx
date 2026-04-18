@@ -56,8 +56,8 @@ export default function Challenge9() {
             <input style={{ ...inp, marginBottom: 12 }} type="password" placeholder="Password"
               value={password} onChange={e => setPassword(e.target.value)} />
             <div style={{ display: 'flex', gap: 10 }}>
-              <button type="submit" style={{ ...btnPrimary, flex: 1 }} disabled={loading}>{'> '} Login</button>
-              <button type="button" onClick={handleDashboard} style={{ ...btnOutline, flex: 1 }} disabled={loading}>{'> '} Dashboard</button>
+              <button type="submit" style={{ ...btnPrimary, flex: 1 }} disabled={loading}>>  Login</button>
+              <button type="button" onClick={handleDashboard} style={{ ...btnOutline, flex: 1 }} disabled={loading}>>  Dashboard</button>
             </div>
           </form>
 

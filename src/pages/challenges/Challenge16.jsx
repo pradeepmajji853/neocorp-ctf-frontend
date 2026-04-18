@@ -79,7 +79,7 @@ export default function Challenge16({ apiBase }) {
             style={textarea}
             spellCheck={false}
           />
-          <button type="submit" style={btn} disabled={loading}>{loading ? 'Updating…' : '{'> '} PUT /profile'}</button>
+          <button type="submit" style={btn} disabled={loading}>{loading ? 'Updating…' : '>  PUT /profile'}</button>
 
           
         </form>

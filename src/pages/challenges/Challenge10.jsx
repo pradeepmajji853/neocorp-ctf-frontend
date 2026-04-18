@@ -49,7 +49,7 @@ export default function Challenge10() {
             Use your browser's built-in developer tools to inspect and, if necessary, modify it.
           </div>
           <button onClick={handleInit} style={btnOutline}>
-            {'> '} Initialize Session
+            >  Initialize Session
           </button>
           {initialized && (
             <div style={{ marginTop: 10, color: '#34d399', fontFamily: "'JetBrains Mono',monospace", fontSize: '0.72rem' }}>
@@ -66,7 +66,7 @@ export default function Challenge10() {
             The server will determine your access level and return the appropriate data.
           </div>
           <button onClick={handleDashboard} style={btnPrimary} disabled={loading}>
-            {loading ? 'Loading...' : '{'> '} Request Dashboard'}
+            {loading ? 'Loading...' : '>  Request Dashboard'}
           </button>
         </div>
 

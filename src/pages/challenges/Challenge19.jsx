@@ -60,7 +60,7 @@ export default function Challenge19({ apiBase }) {
           <div style={{ color: '#475569', fontSize: '0.66rem', textAlign: 'right', marginTop: -10, marginBottom: 12 }}>
             {template.length}/500
           </div>
-          <button type="submit" style={btn} disabled={loading}>{loading ? 'Rendering…' : '{'> '} Preview Email'}</button>
+          <button type="submit" style={btn} disabled={loading}>{loading ? 'Rendering…' : '>  Preview Email'}</button>
 
           
         </form>

@@ -46,7 +46,7 @@ export default function Challenge6() {
             placeholder="e.g. report.txt"
           />
           <button type="submit" style={btnOutline} disabled={loading || !filename}>
-            {loading ? '...' : '{'> '} Retrieve File'}
+            {loading ? '...' : '>  Retrieve File'}
           </button>
         </form>
 

@@ -54,7 +54,7 @@ export default function Challenge15({ apiBase }) {
             style={textarea}
             spellCheck={false}
           />
-          <button type="submit" style={btn} disabled={loading}>{loading ? 'Parsing…' : '{'> '} Import Invoice'}</button>
+          <button type="submit" style={btn} disabled={loading}>{loading ? 'Parsing…' : '>  Import Invoice'}</button>
 
           
         </form>

@@ -47,7 +47,7 @@ export default function Challenge20({ apiBase }) {
           <div style={{ color: '#64748b', fontSize: '0.72rem', marginBottom: 10 }}>STEP 1 — Register an account</div>
           <label style={lbl}>DISPLAY NAME (stored via bound INSERT)</label>
           <input type="text" value={name} onChange={e => setName(e.target.value)} style={inp} placeholder="e.g. operative_7" autoComplete="off" />
-          <button type="submit" style={btn} disabled={loading || !name}>{loading ? 'Registering…' : '{'> '} POST /register-account'}</button>
+          <button type="submit" style={btn} disabled={loading || !name}>{loading ? 'Registering…' : '>  POST /register-account'}</button>
         </form>
 
         <div style={{ padding: '0 22px 22px' }}>

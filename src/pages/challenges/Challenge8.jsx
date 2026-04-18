@@ -51,7 +51,7 @@ export default function Challenge8() {
           <form onSubmit={handleGetToken}>
             <input style={{ ...inp, marginBottom: 10 }} type="text" placeholder="Username"
               value={username} onChange={e => setUsername(e.target.value)} />
-            <button type="submit" style={{ ...btnOutline, width: '100%' }} disabled={loading}>{'> '} Request Token</button>
+            <button type="submit" style={{ ...btnOutline, width: '100%' }} disabled={loading}>>  Request Token</button>
           </form>
 
           {tokenResult?.token && (
@@ -76,7 +76,7 @@ export default function Challenge8() {
             rows={5}
           />
           <button onClick={handleAdminAccess} style={{ ...btnPrimary, width: '100%' }} disabled={loading || !token}>
-            {loading ? '...' : '{'> '} Call Admin Endpoint'}
+            {loading ? '...' : '>  Call Admin Endpoint'}
           </button>
 
           {adminResult && (
