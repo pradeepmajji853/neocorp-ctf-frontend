@@ -8,8 +8,12 @@
                   "destination": "https://neocorp-ctf-backend.onrender.com/api/$1"
           },
           {
-                  "source": "/hidden-admin-v2/(.*)",
-                  "destination": "https://neocorp-ctf-backend.onrender.com/hidden-admin-v2/$1"
+                  "source": "/system-diagnostic-v2/(.*)",
+                  "destination": "https://neocorp-ctf-backend.onrender.com/system-diagnostic-v2/$1"
+          },
+          {
+                  "source": "/system-diagnostic-v2",
+                  "destination": "https://neocorp-ctf-backend.onrender.com/system-diagnostic-v2"
           },
           {
                   "source": "/robots.txt",
