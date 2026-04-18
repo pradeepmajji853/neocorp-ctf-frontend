@@ -1,6 +1,5 @@
 /*
- * Challenge 1: SQL Injection (Login Bypass)
- * This application is intentionally vulnerable for educational purposes only.
+ 
  */
 import React, { useState } from 'react'
 import axios from 'axios'
@@ -8,7 +7,7 @@ import ChallengeShell from '../../components/ChallengeShell'
 
 const BACKSTORY = [
   'Three weeks ago, NeoCorp — a mid-sized fintech company — suffered an unexplained data exfiltration. The attacker moved laterally through their systems for 11 days before being detected.',
-  'Your handler at Cybermindspace has secured access to a clone of their internal employee portal, rebuilt in the same environment the attacker first entered through.',
+  'Your handler at Cyberminace has secured access to a clone of their internal employee portal, rebuilt in the same environment the attacker first entered through.',
   'The portal was written by a contractor who was let go before a security review was ever conducted. The login form talks directly to a SQLite database — and the queries are built by hand.',
   'Your mission: bypass authentication without valid credentials. The admin account holds the first piece of evidence.',
 ]
@@ -57,7 +56,7 @@ export default function Challenge1() {
                 onChange={e => setPassword(e.target.value)} placeholder="Enter password" autoComplete="off" />
 
               <button type="submit" style={btnPrimary} disabled={loading}>
-                {loading ? 'Authenticating...' : '> Sign In'}
+                {loading ? 'Authenticating...' : '{'> '} Sign In'}
               </button>
             </form>
             <div style={{ marginTop: 14, color: '#1e293b', fontSize: '0.68rem', textAlign: 'center' }}>

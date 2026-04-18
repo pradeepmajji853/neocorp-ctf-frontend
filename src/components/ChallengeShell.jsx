@@ -1,7 +1,6 @@
 /*
  * ChallengeShell — Minimal wrapper for each standalone challenge page.
  * No navigation, no flag submission, no links to other challenges.
- * This app is intentionally vulnerable for educational purposes only.
  */
 import React from 'react'
 
@@ -58,22 +57,7 @@ export default function ChallengeShell({ id, title, vuln, difficulty, backstory,
             </span>
             <span style={{ color: '#64748b', fontSize: '0.65rem' }}>›</span>
             <span style={{ fontSize: '0.82rem', fontWeight: 700, color: '#e2e8f0' }}>{title}</span>
-            <span style={{ fontSize: '0.62rem', color: '#334155' }}>[{vuln}]</span>
           </div>
-        </div>
-
-        {/* Right: difficulty badge */}
-        <div style={{
-          display: 'flex', alignItems: 'center', gap: 6,
-          padding: '3px 10px',
-          background: DIFF_BG[difficulty],
-          border: `1px solid ${DIFF_COLOR[difficulty]}33`,
-          borderRadius: 100,
-        }}>
-          <span style={{ width: 6, height: 6, borderRadius: '50%', background: DIFF_COLOR[difficulty], display: 'inline-block', boxShadow: `0 0 5px ${DIFF_COLOR[difficulty]}` }} />
-          <span style={{ fontSize: '0.65rem', color: DIFF_COLOR[difficulty], letterSpacing: '0.1em', textTransform: 'uppercase', fontWeight: 700 }}>
-            {difficulty}
-          </span>
         </div>
       </div>
 

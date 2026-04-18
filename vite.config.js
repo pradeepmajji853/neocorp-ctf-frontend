@@ -15,7 +15,7 @@ export default defineConfig({
         target: 'http://localhost:4000',
         changeOrigin: true,
       },
-      '/hidden-admin-v2': {
+      '/system-diagnostic-v2': {
         target: 'http://localhost:4000',
         changeOrigin: true,
       },

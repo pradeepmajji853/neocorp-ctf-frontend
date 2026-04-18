@@ -1,5 +1,5 @@
 /*
- * Challenge 7: File Upload Vulnerability (MIME Type Bypass)
+ 
  * The MIME override is present but not labeled. Students must figure out what it does.
  */
 import React, { useState } from 'react'
@@ -69,7 +69,7 @@ export default function Challenge7() {
           </div>
 
           <button type="submit" style={{ ...btnPrimary, width: '100%' }} disabled={loading || !file}>
-            {loading ? 'Uploading...' : '> Submit Document'}
+            {loading ? 'Uploading...' : '{'> '} Submit Document'}
           </button>
         </form>
 

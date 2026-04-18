@@ -1,7 +1,7 @@
 /*
- * Challenge 9: Hidden Admin Panel Discovery
+ 
  * Students must discover /hidden-admin-v2 themselves via robots.txt or source code.
- * No fetch buttons or navigation hints provided on this page.
+ * 
  */
 import React, { useState } from 'react'
 import axios from 'axios'
@@ -56,8 +56,8 @@ export default function Challenge9() {
             <input style={{ ...inp, marginBottom: 12 }} type="password" placeholder="Password"
               value={password} onChange={e => setPassword(e.target.value)} />
             <div style={{ display: 'flex', gap: 10 }}>
-              <button type="submit" style={{ ...btnPrimary, flex: 1 }} disabled={loading}>> Login</button>
-              <button type="button" onClick={handleDashboard} style={{ ...btnOutline, flex: 1 }} disabled={loading}>> Dashboard</button>
+              <button type="submit" style={{ ...btnPrimary, flex: 1 }} disabled={loading}>{'> '} Login</button>
+              <button type="button" onClick={handleDashboard} style={{ ...btnOutline, flex: 1 }} disabled={loading}>{'> '} Dashboard</button>
             </div>
           </form>
 

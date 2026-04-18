@@ -1,6 +1,5 @@
 /*
- * Challenge 3: Stored XSS (Bulletin Board)
- * This application is intentionally vulnerable for educational purposes only.
+ 
  */
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
@@ -47,7 +46,7 @@ export default function Challenge3() {
             <textarea style={{ ...inp, resize: 'vertical', marginBottom: 12 }} value={content}
               onChange={e => setContent(e.target.value)} placeholder="Write your message... (HTML supported)" rows={5} />
             <button type="submit" style={{ ...btnPrimary, width: '100%' }} disabled={loading}>
-              {loading ? 'Posting...' : '> Post Message'}
+              {loading ? 'Posting...' : '{'> '} Post Message'}
             </button>
           </form>
 

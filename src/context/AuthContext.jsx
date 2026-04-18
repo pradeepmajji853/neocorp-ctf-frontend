@@ -6,6 +6,7 @@ const AuthContext = createContext(null)
 export function AuthProvider({ children }) {
   const [player, setPlayer] = useState(null)
   const [solved, setSolved] = useState([])
+  const [serviceMap, setServiceMap] = useState({})
   const [loading, setLoading] = useState(true)
 
   const fetchMe = async () => {
@@ -13,9 +14,17 @@ export function AuthProvider({ children }) {
       const res = await axios.get('/api/auth/me', { withCredentials: true })
       setPlayer(res.data.player)
       setSolved(res.data.solved || [])
+
+      // Also fetch the serviceMap from progress after confirming auth
+      try {
+        const prog = await axios.get('/api/progress', { withCredentials: true })
+        setSolved(prog.data.solved || [])
+        setServiceMap(prog.data.serviceMap || {})
+      } catch { /* progress fetch failed, serviceMap stays empty */ }
     } catch {
       setPlayer(null)
       setSolved([])
+      setServiceMap({})
     } finally {
       setLoading(false)
     }
@@ -47,6 +56,7 @@ export function AuthProvider({ children }) {
     try {
       const res = await axios.get('/api/progress', { withCredentials: true })
       setSolved(res.data.solved || [])
+      setServiceMap(res.data.serviceMap || {})
     } catch { /* ignore */ }
   }
 
@@ -56,7 +66,7 @@ export function AuthProvider({ children }) {
   }
 
   return (
-    <AuthContext.Provider value={{ player, solved, loading, login, register, logout, refreshProgress, isUnlocked }}>
+    <AuthContext.Provider value={{ player, solved, serviceMap, loading, login, register, logout, refreshProgress, isUnlocked }}>
       {children}
     </AuthContext.Provider>
   )

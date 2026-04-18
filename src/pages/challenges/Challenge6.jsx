@@ -1,5 +1,5 @@
 /*
- * Challenge 6: Directory Traversal (File Reader)
+ 
  * Students must discover path traversal themselves. No presets provided.
  */
 import React, { useState } from 'react'
@@ -46,7 +46,7 @@ export default function Challenge6() {
             placeholder="e.g. report.txt"
           />
           <button type="submit" style={btnOutline} disabled={loading || !filename}>
-            {loading ? '...' : '> Retrieve File'}
+            {loading ? '...' : '{'> '} Retrieve File'}
           </button>
         </form>
 

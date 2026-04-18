@@ -1,5 +1,5 @@
 /*
- * Challenge 4: Broken Authentication (Weak Base64 Session Cookie)
+ 
  * Students must decode the base64 token themselves, forge it, and submit.
  */
 import React, { useState } from 'react'
@@ -54,7 +54,7 @@ export default function Challenge4() {
               value={username} onChange={e => setUsername(e.target.value)} />
             <input style={{ ...inp, marginBottom: 12 }} type="password" placeholder="password"
               value={password} onChange={e => setPassword(e.target.value)} />
-            <button type="submit" style={{ ...btnPrimary, width: '100%' }} disabled={loading}>> Authenticate</button>
+            <button type="submit" style={{ ...btnPrimary, width: '100%' }} disabled={loading}>{'> '} Authenticate</button>
           </form>
 
           {loginResult && (
@@ -78,7 +78,7 @@ export default function Challenge4() {
             rows={4}
           />
           <button onClick={handleProfile} style={{ ...btnOutline, width: '100%' }} disabled={loading || !sessionToken}>
-            {loading ? 'Checking...' : '> Access Profile Endpoint'}
+            {loading ? 'Checking...' : '{'> '} Access Profile Endpoint'}
           </button>
 
           {profileResult && (

@@ -44,7 +44,7 @@ export default function Login() {
             {isRegister ? 'Create Account' : 'Operative Login'}
           </h1>
           <p style={{ color: '#475569', fontSize: '0.82rem', marginTop: 6 }}>
-            {isRegister ? 'Register to begin the CTF challenges.' : 'Authenticate to access the training environment.'}
+            {isRegister ? 'Register to begin the training simulation.' : 'Authenticate to access the training environment.'}
           </p>
         </div>
 

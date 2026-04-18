@@ -13,6 +13,16 @@ const CHALLENGES = [
   { id: 8, title: 'Forged Tokens', vuln: 'JWT Manipulation', difficulty: 'hard' },
   { id: 9, title: 'Hidden Fortress', vuln: 'Hidden Panel', difficulty: 'medium' },
   { id: 10, title: 'Master Access', vuln: 'Role Escalation', difficulty: 'hard' },
+  { id: 11, title: 'Network Diagnostics', vuln: 'Command Injection', difficulty: 'easy' },
+  { id: 12, title: 'Phishing Gateway', vuln: 'Open Redirect', difficulty: 'easy' },
+  { id: 13, title: 'Forgotten Backup', vuln: 'Sensitive Data Exposure', difficulty: 'easy' },
+  { id: 14, title: 'URL Preview Service', vuln: 'SSRF', difficulty: 'easy' },
+  { id: 15, title: 'Invoice Import', vuln: 'XXE', difficulty: 'medium' },
+  { id: 16, title: 'Profile API', vuln: 'Mass Assignment', difficulty: 'medium' },
+  { id: 17, title: 'Promo Code Redemption', vuln: 'Race Condition', difficulty: 'hard' },
+  { id: 18, title: 'Preferences Merge', vuln: 'Prototype Pollution', difficulty: 'hard' },
+  { id: 19, title: 'Email Template Preview', vuln: 'Server-Side Template Injection', difficulty: 'hard' },
+  { id: 20, title: 'Audit Log Viewer', vuln: 'Second-Order SQLi', difficulty: 'medium' },
 ]
 
 const DIFF_COLOR = { easy: '#34d399', medium: '#fbbf24', hard: '#fb923c' }
@@ -23,7 +33,7 @@ export default function Dashboard() {
 
   useEffect(() => { refreshProgress() }, [])
 
-  const pct = Math.round((solved.length / 10) * 100)
+  const pct = Math.round((solved.length / 20) * 100)
 
   return (
     <div style={page}>
@@ -49,7 +59,7 @@ export default function Dashboard() {
         <div style={progressContainer}>
           <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 8 }}>
             <span style={{ color: '#64748b', fontSize: '0.72rem', letterSpacing: '0.06em' }}>PROGRESS</span>
-            <span style={{ color: '#3b82f6', fontSize: '0.72rem' }}>{solved.length}/10 ({pct}%)</span>
+            <span style={{ color: '#3b82f6', fontSize: '0.72rem' }}>{solved.length}/20 ({pct}%)</span>
           </div>
           <div style={progressTrack}>
             <div style={{ ...progressFill, width: `${pct}%` }} />
@@ -65,7 +75,12 @@ export default function Dashboard() {
             return (
               <div
                 key={ch.id}
-                onClick={() => unlocked && navigate(`/challenge-${ch.id}`)}
+                onClick={() => {
+                  if (!unlocked) return;
+                  const secret = serviceMap[ch.id];
+                  const path = ch.id >= 11 ? (secret ? `/${secret}` : `/challenge-${ch.id}`) : `/challenge-${ch.id}`;
+                  navigate(path);
+                }}
                 style={{
                   ...card,
                   cursor: unlocked ? 'pointer' : 'not-allowed',
