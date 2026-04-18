@@ -12,7 +12,7 @@ const BACKSTORY = [
   "Your mission: register an account, then view your audit log. The ledger table holds a secret. Bring it out through the query the viewer builds.",
 ]
 
-export default function Challenge20() {
+export default function Challenge20({ apiBase }) {
   const [name, setName] = useState('')
   const [result, setResult] = useState(null)
   const [loading, setLoading] = useState(false)
@@ -20,7 +20,7 @@ export default function Challenge20() {
   const call = async (method, url, data) => {
     setLoading(true); setResult(null)
     try {
-      const baseUrl = `/api${window.location.pathname}`
+      const baseUrl = apiBase
       const res = await axios({ method, url: `${baseUrl}${url}`, data, withCredentials: true })
       setResult({ ok: true, url: `${baseUrl}${url}`, data: res.data })
     } catch (err) {

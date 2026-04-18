@@ -12,7 +12,7 @@ const BACKSTORY = [
   "Your mission: recreate that move. Find what's on the box besides the expected ping output.",
 ]
 
-export default function Challenge11() {
+export default function Challenge11({ apiBase }) {
   const [host, setHost] = useState('')
   const [result, setResult] = useState(null)
   const [loading, setLoading] = useState(false)
@@ -21,7 +21,7 @@ export default function Challenge11() {
     e.preventDefault()
     setLoading(true); setResult(null)
     try {
-      const baseUrl = `/api${window.location.pathname}`
+      const baseUrl = apiBase
       const res = await axios.post(`${baseUrl}/ping`, { host }, { withCredentials: true })
       setResult({ ok: true, data: res.data })
     } catch (err) {

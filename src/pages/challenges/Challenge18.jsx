@@ -17,7 +17,7 @@ const SAMPLE = `{
   "notifications": { "email": false }
 }`
 
-export default function Challenge18() {
+export default function Challenge18({ apiBase }) {
   const [body, setBody] = useState(SAMPLE)
   const [result, setResult] = useState(null)
   const [loading, setLoading] = useState(false)
@@ -25,7 +25,7 @@ export default function Challenge18() {
   const call = async (method, url, data) => {
     setLoading(true); setResult(null)
     try {
-      const baseUrl = `/api${window.location.pathname}`
+      const baseUrl = apiBase
       const res = await axios({ method, url: `${baseUrl}${url}`, data, withCredentials: true })
       setResult({ ok: true, url: `${baseUrl}${url}`, data: res.data })
     } catch (err) {
@@ -41,7 +41,7 @@ export default function Challenge18() {
     catch (err) {
       setResult({ ok: false, data: { message: 'Invalid JSON: ' + err.message } }); return
     }
-    const baseUrl = `/api${window.location.pathname}`
+    const baseUrl = apiBase
     call('put', '/preferences', parsed)
   }
 

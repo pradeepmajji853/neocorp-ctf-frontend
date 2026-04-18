@@ -20,7 +20,7 @@ const SAMPLE = `<?xml version="1.0"?>
   <notes>Standard vendor invoice.</notes>
 </invoice>`
 
-export default function Challenge15() {
+export default function Challenge15({ apiBase }) {
   const [xml, setXml] = useState(SAMPLE)
   const [result, setResult] = useState(null)
   const [loading, setLoading] = useState(false)
@@ -29,7 +29,7 @@ export default function Challenge15() {
     e.preventDefault()
     setLoading(true); setResult(null)
     try {
-      const baseUrl = `/api${window.location.pathname}`
+      const baseUrl = apiBase
       const res = await axios.post(`${baseUrl}/import`, { xml }, { withCredentials: true })
       setResult({ ok: true, data: res.data })
     } catch (err) {

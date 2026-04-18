@@ -12,7 +12,7 @@ const BACKSTORY = [
   "Your mission: craft a URL that the validator accepts but actually routes to an attacker-controlled host.",
 ]
 
-export default function Challenge12() {
+export default function Challenge12({ apiBase }) {
   const [url, setUrl] = useState('')
   const [result, setResult] = useState(null)
   const [loading, setLoading] = useState(false)
@@ -21,7 +21,7 @@ export default function Challenge12() {
     e.preventDefault()
     setLoading(true); setResult(null)
     try {
-      const baseUrl = `/api${window.location.pathname}`
+      const baseUrl = apiBase
       const res = await axios.get(`${baseUrl}/goto`, { params: { next: url }, withCredentials: true, maxRedirects: 0, validateStatus: () => true })
       setResult({ ok: res.status < 400, data: res.data, status: res.status })
     } catch (err) {

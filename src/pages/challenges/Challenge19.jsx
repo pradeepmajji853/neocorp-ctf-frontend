@@ -17,7 +17,7 @@ Welcome to \${company}! Your account is ready as of \${year}.
 
 — The NeoCorp Team`
 
-export default function Challenge19() {
+export default function Challenge19({ apiBase }) {
   const [template, setTemplate] = useState(SAMPLE)
   const [recipient, setRecipient] = useState('Security Team')
   const [name, setName] = useState('Player')
@@ -28,7 +28,7 @@ export default function Challenge19() {
     e.preventDefault()
     setLoading(true); setResult(null)
     try {
-      const baseUrl = `/api${window.location.pathname}`
+      const baseUrl = apiBase
       const res = await axios.post(`${baseUrl}/preview`, { template, recipient_name: name }, { withCredentials: true })
       setResult({ ok: true, data: res.data })
     } catch (err) {

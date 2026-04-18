@@ -12,10 +12,10 @@ const BACKSTORY = [
   "Your mission: find the archive. The filename pattern is a common one — you've seen it before.",
 ]
 
-export default function Challenge13() {
+export default function Challenge13({ apiBase }) {
   const [custom, setCustom] = useState('')
 
-  const baseUrl = `/api${window.location.pathname}`
+  const baseUrl = apiBase
   const ENDPOINTS = [
     `${baseUrl}/info`,
     `${baseUrl}/backup.zip`,

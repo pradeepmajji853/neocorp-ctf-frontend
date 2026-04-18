@@ -17,7 +17,7 @@ const DEFAULT_BODY = `{
   "bio": "I'm just editing my profile!"
 }`
 
-export default function Challenge16() {
+export default function Challenge16({ apiBase }) {
   const [body, setBody] = useState(DEFAULT_BODY)
   const [profile, setProfile] = useState(null)
   const [loadingProfile, setLoadingProfile] = useState(true)
@@ -27,7 +27,7 @@ export default function Challenge16() {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const baseUrl = `/api${window.location.pathname}`
+        const baseUrl = apiBase
         const res = await axios.get(`${baseUrl}/profile`, { withCredentials: true })
         setProfile(res.data.profile)
       } catch (err) { /* ignore */ }
@@ -46,7 +46,7 @@ export default function Challenge16() {
       setLoading(false); return
     }
     try {
-      const baseUrl = `/api${window.location.pathname}`
+      const baseUrl = apiBase
       const res = await axios.put(`${baseUrl}/profile`, parsed, { withCredentials: true })
       setResult({ ok: true, data: res.data })
       setProfile(res.data.profile)

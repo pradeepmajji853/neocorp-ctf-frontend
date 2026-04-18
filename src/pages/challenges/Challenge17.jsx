@@ -14,7 +14,7 @@ const BACKSTORY = [
 
 const CODES = ['FIRSTTIME25', 'WELCOME50', 'LAUNCH100']
 
-export default function Challenge17() {
+export default function Challenge17({ apiBase }) {
   const [result, setResult] = useState(null)
   const [code, setCode] = useState('LAUNCH100')
   const [parallel, setParallel] = useState(15)
@@ -24,7 +24,7 @@ export default function Challenge17() {
 
   const loadBalance = async () => {
     try {
-      const baseUrl = `/api${window.location.pathname}`
+      const baseUrl = apiBase
       const res = await axios.get(`${baseUrl}/balance`, { withCredentials: true })
       setBalance(res.data)
     } catch (err) { /* ignore */ }
@@ -33,7 +33,7 @@ export default function Challenge17() {
   useEffect(() => { loadBalance() }, [])
 
   const reset = async () => {
-    const baseUrl = `/api${window.location.pathname}`
+    const baseUrl = apiBase
     await axios.post(`${baseUrl}/reset`, {}, { withCredentials: true })
     setResults([])
     loadBalance()
@@ -42,7 +42,7 @@ export default function Challenge17() {
   const fireSingle = async () => {
     setLoading(true); setResults([])
     try {
-      const baseUrl = `/api${window.location.pathname}`
+      const baseUrl = apiBase
       const res = await axios.post(`${baseUrl}/redeem`, { code }, { withCredentials: true })
       setResults([{ ok: true, data: res.data }])
     } catch (err) {
@@ -54,7 +54,7 @@ export default function Challenge17() {
 
   const fireParallel = async () => {
     setLoading(true); setResults([])
-    const baseUrl = `/api${window.location.pathname}`
+    const baseUrl = apiBase
     const promises = Array.from({ length: parallel }, () =>
       axios.post(`${baseUrl}/redeem`, { code }, { withCredentials: true })
         .then(r => ({ ok: true, data: r.data }))

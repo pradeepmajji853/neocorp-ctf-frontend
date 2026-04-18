@@ -12,7 +12,7 @@ const BACKSTORY = [
   "Your mission: make the preview service fetch an internal endpoint it shouldn't be able to reach.",
 ]
 
-export default function Challenge14() {
+export default function Challenge14({ apiBase }) {
   const [url, setUrl] = useState('')
   const [result, setResult] = useState(null)
   const [loading, setLoading] = useState(false)
@@ -21,7 +21,7 @@ export default function Challenge14() {
     e.preventDefault()
     setLoading(true); setResult(null)
     try {
-      const baseUrl = `/api${window.location.pathname}`
+      const baseUrl = apiBase
       const res = await axios.post(`${baseUrl}/preview`, { url }, { withCredentials: true })
       setResult({ ok: true, data: res.data })
     } catch (err) {
