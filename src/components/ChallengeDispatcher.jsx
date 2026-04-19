@@ -18,6 +18,8 @@ import Challenge22 from '../pages/challenges/Challenge22'
 import Challenge23 from '../pages/challenges/Challenge23'
 import Challenge24 from '../pages/challenges/Challenge24'
 import Challenge25 from '../pages/challenges/Challenge25'
+import Challenge26 from '../pages/challenges/Challenge26'
+import Challenge27 from '../pages/challenges/Challenge27'
 
 // Frontend slug → challenge number mapping (hardcoded — frontend never changes)
 const SLUG_TO_ID = {
@@ -36,6 +38,8 @@ const SLUG_TO_ID = {
   'challenge-23':         23,
   'challenge-24':         24,
   'challenge-25':         25,
+  'challenge-26':         26,
+  'challenge-27':         27,
 }
 
 const ID_TO_COMPONENT = {
@@ -43,7 +47,7 @@ const ID_TO_COMPONENT = {
   14: Challenge14, 15: Challenge15, 16: Challenge16,
   17: Challenge17, 18: Challenge18, 19: Challenge19,
   20: Challenge20, 21: Challenge21, 22: Challenge22, 23: Challenge23,
-  24: Challenge24, 25: Challenge25,
+  24: Challenge24, 25: Challenge25, 26: Challenge26, 27: Challenge27,
 }
 
 export default function ChallengeDispatcher() {
