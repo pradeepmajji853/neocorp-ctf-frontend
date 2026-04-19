@@ -52,7 +52,7 @@ function LandingPage() {
           <span style={brand}>NEOCORP</span>
         </div>
         <h1 style={title}>Internal Security Audit</h1>
-        <p style={subtitle}>20 vulnerability assessments. Navigate directly to each node.</p>
+        <p style={subtitle}>21 vulnerability assessments. Navigate directly to each node.</p>
         <div style={divider} />
 
         <div style={sectionLabel}>NODES 01 – 10 // Standard Access</div>
@@ -65,7 +65,7 @@ function LandingPage() {
           ))}
         </div>
 
-        <div style={{ ...sectionLabel, marginTop: 32 }}>NODES 11 – 20 // Classified Access</div>
+        <div style={{ ...sectionLabel, marginTop: 32 }}>NODES 11 – 21 // Classified Access</div>
         <div style={infoBox}>
           Advanced nodes are accessible only via their assigned internal addresses.
           Reference your operational briefing for exact node paths.

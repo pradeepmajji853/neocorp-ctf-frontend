@@ -23,6 +23,7 @@ const CHALLENGES = [
   { id: 18, title: 'Preferences Merge', vuln: 'Prototype Pollution', difficulty: 'hard' },
   { id: 19, title: 'Email Template Preview', vuln: 'Server-Side Template Injection', difficulty: 'hard' },
   { id: 20, title: 'Audit Log Viewer', vuln: 'Second-Order SQLi', difficulty: 'medium' },
+  { id: 21, title: 'Signature Vault', vuln: 'Hash Length Extension', difficulty: 'hard' },
 ]
 
 const DIFF_COLOR = { easy: '#34d399', medium: '#fbbf24', hard: '#fb923c' }
@@ -33,7 +34,7 @@ export default function Dashboard() {
 
   useEffect(() => { refreshProgress() }, [])
 
-  const pct = Math.round((solved.length / 20) * 100)
+  const pct = Math.round((solved.length / 21) * 100)
 
   return (
     <div style={page}>
@@ -59,7 +60,7 @@ export default function Dashboard() {
         <div style={progressContainer}>
           <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 8 }}>
             <span style={{ color: '#64748b', fontSize: '0.72rem', letterSpacing: '0.06em' }}>PROGRESS</span>
-            <span style={{ color: '#3b82f6', fontSize: '0.72rem' }}>{solved.length}/20 ({pct}%)</span>
+            <span style={{ color: '#3b82f6', fontSize: '0.72rem' }}>{solved.length}/21 ({pct}%)</span>
           </div>
           <div style={progressTrack}>
             <div style={{ ...progressFill, width: `${pct}%` }} />

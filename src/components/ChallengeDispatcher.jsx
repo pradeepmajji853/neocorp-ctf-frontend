@@ -13,6 +13,7 @@ import Challenge17 from '../pages/challenges/Challenge17'
 import Challenge18 from '../pages/challenges/Challenge18'
 import Challenge19 from '../pages/challenges/Challenge19'
 import Challenge20 from '../pages/challenges/Challenge20'
+import Challenge21 from '../pages/challenges/Challenge21'
 
 // Frontend slug → challenge number mapping (hardcoded — frontend never changes)
 const SLUG_TO_ID = {
@@ -26,13 +27,14 @@ const SLUG_TO_ID = {
   'merge-pref-88151040':  18,
   'mail-tpl-1a21e686':    19,
   'compliance-34275d89':  20,
+  'sig-vault-d39c7a81':   21,
 }
 
 const ID_TO_COMPONENT = {
   11: Challenge11, 12: Challenge12, 13: Challenge13,
   14: Challenge14, 15: Challenge15, 16: Challenge16,
   17: Challenge17, 18: Challenge18, 19: Challenge19,
-  20: Challenge20,
+  20: Challenge20, 21: Challenge21,
 }
 
 export default function ChallengeDispatcher() {
